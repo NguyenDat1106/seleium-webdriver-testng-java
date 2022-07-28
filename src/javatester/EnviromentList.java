@@ -1,4 +1,4 @@
-package javaTester;
+package javatester;
 
 public enum EnviromentList {
 
