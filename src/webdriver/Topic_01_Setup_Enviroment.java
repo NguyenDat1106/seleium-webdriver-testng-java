@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_01_seup_Enviroment {
+public class Topic_01_Setup_Enviroment {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 

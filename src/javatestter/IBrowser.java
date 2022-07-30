@@ -1,4 +1,4 @@
-package javatester;
+package javatestter;
 
 public interface IBrowser {
 
