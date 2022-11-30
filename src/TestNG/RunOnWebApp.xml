@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Web Application">
+  
+  <test name="Run on FIREFOX">
+<parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="TestNG.Topic_05_Parameter_Bowser"/>
+    </classes>
+  </test> 
+</suite> 

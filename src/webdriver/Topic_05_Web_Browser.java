@@ -1,6 +1,5 @@
 package webdriver;
 
-import java.sql.Driver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -27,18 +26,17 @@ public class Topic_05_Web_Browser {
 	@BeforeClass
 	public void beforeClass() {
 		if (osName.contains("Mac")) {
-			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
 		} else {
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		}
+		
 		// Khởi tạo
-
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 
-	@Test
 	public void TC_01_Browser() {
 		// các hàm tương tác vs Browser sẽ thông qua biến driver
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,17 +21,17 @@ public class topic_18_Javacript_Excutor{
 	 
 	@BeforeClass
 	public void beforeClass() {
-		/*if (osName.contains("Mac")) {
+		if (osName.contains("Mac")) {
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		}else {
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		}
 	
-		driver = new FirefoxDriver();*/
+		driver = new FirefoxDriver();
 		
 		
-		System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\edgedriver.exe");
-		driver = new EdgeDriver();
+		//System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\edgedriver.exe");
+		//driver = new EdgeDriver();
 		
 		jsExecutor = (JavascriptExecutor) driver;
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -39,7 +39,7 @@ public class topic_18_Javacript_Excutor{
 		
 	}
 
-	@Test
+	
 	public void TC_01_TechPanda() {
 		navigateToUrlByJS("http://live.techpanda.org/");
 		sleepInSecond(5);
@@ -87,7 +87,7 @@ public class topic_18_Javacript_Excutor{
 		
 	}
 
-	
+	@Test
 	public void TC_02_Rode() {
 		
 		navigateToUrlByJS("https://warranty.rode.com/");

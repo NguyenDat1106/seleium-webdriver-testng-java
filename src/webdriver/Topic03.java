@@ -28,7 +28,7 @@ public class Topic03{
 		driver = new FirefoxDriver();
 		
 		// Bấm cho full Browser lên 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
 	}

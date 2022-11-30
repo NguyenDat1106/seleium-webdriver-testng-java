@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]">
+  <parameter name="enviroment" value="live"/>
+  <listeners>
+    <listener class-name="listener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Run on FIREFOX(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="TestNG.Topic_09_Listener">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Rigester"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- TestNG.Topic_09_Listener -->
+    </classes>
+  </test> <!-- Run on FIREFOX(failed) -->
+</suite> <!-- Failed suite [Suite] -->

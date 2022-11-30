@@ -1,6 +1,5 @@
 package webdriver;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -56,7 +55,7 @@ public class topic_16_Frame_Iframe{
 		
 		//B
 		String facebookLikeNumber = driver.findElement(By.xpath("//a[text()='Kyna.vn']/parent::div/following-sibling::div")).getText();
-		Assert.assertEquals(facebookLikeNumber, "166K likes");
+		Assert.assertEquals(facebookLikeNumber, "165K likes");
 		
 		// ko support nhảy từ iframe B qua iframe C ( 2 Iframe này thuộc A)
 		
@@ -104,7 +103,7 @@ public class topic_16_Frame_Iframe{
 		
 	}
 
-@Test
+	@Test
 	public void TC_02_() {
 	driver.get("https://netbanking.hdfcbank.com/netbanking/");
 

@@ -57,16 +57,7 @@ public class topic_09_Button{
 		//verify background color 
 		Assert.assertEquals(hexaColor, "#C92127");
 		
-	}
-
-	@Test
-	public void TC_02_() {
-		
-		
-		sleepInSecond(5);
-		
-	}
-
+	}	
 	
 
 	@AfterClass

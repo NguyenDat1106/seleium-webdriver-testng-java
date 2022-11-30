@@ -23,7 +23,7 @@ public class Topic_06_Textbox_Textarea_2{
 	@BeforeClass
 	public void beforeClass() {
 		if (osName.contains("Mac")) {
-			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
 		}else {
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		}

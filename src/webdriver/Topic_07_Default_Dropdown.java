@@ -88,7 +88,7 @@ public class Topic_07_Default_Dropdown{
 		
 	}
 
-	@Test
+	//@Test
 	public void TC_02_Default_Dropdown() {
 		driver.get("https://rode.com/en/support/where-to-buy");
 		

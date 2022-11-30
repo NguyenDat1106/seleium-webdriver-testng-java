@@ -1,7 +1,5 @@
 package webdriver;
 
-import java.awt.Dimension;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -10,7 +8,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -45,7 +42,7 @@ public class topic_07_Custom_Dropdown{
 		//driver.manage().window().setSize(new org.openqa.selenium.Dimension(1366, 768));
 		
 		
-	// Khởi tạo wait
+	// Khởi tạo wait 
 		explicitwait = new WebDriverWait(driver, 30);
 		
 		
@@ -54,7 +51,7 @@ public class topic_07_Custom_Dropdown{
 		
 	}
 
-
+	
 	public void TC_01_() {
 		driver.get("https://jqueryui.com/resources/demos/selectmenu/default.html");
 		/* 
@@ -139,8 +136,7 @@ public class topic_07_Custom_Dropdown{
 		sleepInSecond(3);
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#salutation-button>span.ui-selectmenu-text")).getText(), "Dr.");
 	}
-
-
+	
 	public void TC_02_Honda() {
 		driver.get("https://www.honda.com.vn/o-to/du-toan-chi-phi");
 		
@@ -166,7 +162,7 @@ public class topic_07_Custom_Dropdown{
 		Assert.assertEquals(select.getFirstSelectedOption().getText(), "Khu vực II");
 	}
 
-
+	
 	public void TC_03_React() {
 		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-selection/");
 		
@@ -184,7 +180,7 @@ public class topic_07_Custom_Dropdown{
 		
 	}
 	
-
+	
 	public void TC_04_VueJS() {
 		driver.get("https://mikerodham.github.io/vue-dropdowns/");
 		
@@ -202,7 +198,7 @@ public class topic_07_Custom_Dropdown{
 		
 	}
 	
-
+	
 	public void TC_05_React_Selectable() {
 		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-search-selection/");
 		

@@ -35,8 +35,8 @@ public class topic_11_Custom_Radio_Checkbox{
 		
 	}
 
-
-public void TC_01_() {
+	
+	public void TC_01_() {
 		driver.get("https://material.angular.io/components/checkbox/examples");
 		
 		//Case 1
@@ -78,8 +78,9 @@ public void TC_01_() {
 		sleepInSecond(3);
 		Assert.assertTrue(driver.findElement(By.xpath("	//span[text()='Checked']/preceding-sibling::span/input")).isSelected());
 	}
-
-public void TC_02_Custom_Radio() {
+	
+	
+	public void TC_02_Custom_Radio() {
 		driver.get("https://material.angular.io/components/radio/examples");
 		
 		By springRadio = By.xpath("//span[contains(text(),' Spring ')]/preceding-sibling::span/input");
@@ -88,8 +89,8 @@ public void TC_02_Custom_Radio() {
 		Assert.assertTrue(driver.findElement(springRadio).isSelected());
 			
 	}
-
-public void TC_03_VNDirect() {
+	
+	public void TC_03_VNDirect() {
 	driver.get("https://account-v2.vndirect.com.vn");
 	
 	By termCheckbox = By.xpath("//input[@name='acceptTerms']");
@@ -99,8 +100,8 @@ public void TC_03_VNDirect() {
 	
 }
 
-@Test
-public void TC_04_Google() {
+	@Test
+	public void TC_04_Google() {
 	driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfiypnd69zhuDkjKgqvpID9kwO29UCzeCVrGGtbNPZXQok0jA/viewform");
 	
 	By canthoRadio = By.xpath("//div[@aria-label='Cần Thơ']");
@@ -108,7 +109,7 @@ public void TC_04_Google() {
 	// Verify trước khi click
 	// String Text = String Text
 	Assert.assertEquals(driver.findElement(canthoRadio).getAttribute("aria-checked"), "false");
-	Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='false']")).isSelected());
+	Assert.assertFalse(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='false']")).isSelected());
 	// String Text = boolean
 		//Assert.assertEquals(driver.findElement(canthoRadio).getAttribute("aria-checked"), false);
 	
@@ -118,20 +119,20 @@ public void TC_04_Google() {
 	
 	// Verify sau khi click
 	Assert.assertEquals(driver.findElement(canthoRadio).getAttribute("aria-checked"), "true");
-	Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='true']")).isSelected());
+	Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='true']")).isDisplayed());
 	
 	By miQuangCheckbox = By.xpath("//div[@aria-label='Mì Quảng']");
 	
 	checkToCheckbox("//div[@aria-label='Mì Quảng']");
 	sleepInSecond(3);
 	Assert.assertEquals(driver.findElement(miQuangCheckbox).getAttribute("aria-checked"), "true");
-	Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Mì Quảng' and @aria-checked='true']")).isSelected());
+	Assert.assertFalse(driver.findElement(By.xpath("//div[@aria-label='Mì Quảng' and @aria-checked='true']")).isSelected());
 	
 	uncheckToCheckbox("//div[@aria-label='Mì Quảng']");
 	sleepInSecond(3);
 	
 	Assert.assertEquals(driver.findElement(miQuangCheckbox).getAttribute("aria-checked"), "false");
-	Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Mì Quảng' and @aria-checked='false']")).isSelected());
+	Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Mì Quảng' and @aria-checked='false']")).isDisplayed());
 }
     public void checkToCheckbox(String xpathLacator) {
     	WebElement element = driver.findElement(By.xpath(xpathLacator));

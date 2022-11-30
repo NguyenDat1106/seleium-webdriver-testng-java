@@ -67,6 +67,7 @@ public class topic_15_Fired_Popup{
 	
 	public void TC_02_Fixed_In_Dom_Kyna() {
 		driver.get("https://kyna.vn/");
+
 		
 		WebElement loginPopup = driver.findElement(By.cssSelector("div#k-popup-account-login"));
 		
@@ -90,7 +91,7 @@ public class topic_15_Fired_Popup{
 		// verify login popup is undisplayed
 		Assert.assertFalse(loginPopup.isDisplayed());
 			}
-	@Test
+	
 	public void TC_03_Fixed_Not_In_Dom_Tiki() {
 		driver.get("https://tiki.vn/");
 		
@@ -151,7 +152,7 @@ public class topic_15_Fired_Popup{
 		}	
 	}
 	
-	
+	@Test
 	public void TC_05_Radom_Not_In_Dom() {
 		
 		// độ phân giải màn mình thấp 1366x768

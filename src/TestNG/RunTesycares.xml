@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Suite" thread-count="3">
+  <listeners>
+  <listener class-name="listener.ExtentReportListener" />
+  </listeners>
+<!--<groups>-->
+<!-- <run>-->
+<!--<include name="admin"></include>-->
+<!--</run>-->
+<!--</groups>-->
+<!--<packages>-->
+<!--<package name="tiki.admin"/>-->
+<!--</packages>-->
+      <parameter name="enviroment" value="live"/>
+  <test name="Run on FIREFOX">
+<parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="TestNG.Topic_06_Parameter_Enviroment"/>
+    </classes>
+  </test> 
+</suite> 

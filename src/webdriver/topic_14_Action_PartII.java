@@ -30,8 +30,8 @@ public class topic_14_Action_PartII{
 	JavascriptExecutor jsExecutor;
 	 Actions action;
 	String projectPath = System.getProperty("user.dir");
-String jsFileContent;
-	 String osName = System.getProperty("os.name");
+	String jsFileContent;
+	String osName = System.getProperty("os.name");
 	 
 	@BeforeClass
 	public void beforeClass() {
@@ -68,7 +68,7 @@ String jsFileContent;
 	}
 	
 
-
+	
 	public void TC_02_Drag_Drop_HTML5_JavaCript() throws IOException {
 		driver.get("https://automationfc.github.io/drag-drop-html5/");
 	
@@ -97,8 +97,8 @@ String jsFileContent;
 		
 		dragAndDropHTML5ByXpath("//div[@id='column-a']", "//div[@id='column-b']");
 		sleepInSecond(3);
-		Assert.assertEquals(driver.findElement(By.cssSelector("div#column-a>header")).getText(), "B");
-		Assert.assertEquals(driver.findElement(By.cssSelector("div#column-b>header")).getText(), "A");
+		Assert.assertEquals(driver.findElement(By.cssSelector("div#column-a>header")).getText(), "A");
+		Assert.assertEquals(driver.findElement(By.cssSelector("div#column-b>header")).getText(), "B");
 		
 		dragAndDropHTML5ByXpath("//div[@id='column-a']", "//div[@id='column-b']");
 		sleepInSecond(3);

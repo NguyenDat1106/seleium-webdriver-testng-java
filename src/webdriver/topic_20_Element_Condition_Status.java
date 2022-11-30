@@ -27,13 +27,13 @@ public class topic_20_Element_Condition_Status{
 		}
 	
 		driver = new FirefoxDriver();
-		explicitWait = new WebDriverWait(driver, 10	);
+		explicitWait = new WebDriverWait(driver, 10);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
 	}
 
-	
+	@Test
 	public void TC_01_Visible_Displayed_Visibility() {
 		driver.get("https://www.facebook.com/");
 		
@@ -52,7 +52,7 @@ public class topic_20_Element_Condition_Status{
 		// có trong html
 		driver.findElement(By.xpath("//a[text()='Create New Account']")).click();
 	
-		// Wait cho Re-enter email textbox textbox không hiển thị trong vòng 10s
+		// Wait cho Re-enter email textbox  không hiển thị trong vòng 10s
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(By.name("reg_email_confirmation__")));
 
 	}
@@ -73,7 +73,7 @@ public class topic_20_Element_Condition_Status{
 		driver.get("https://www.facebook.com/");
 		// có trên UI 
 		// có trên HTML (bắt buộc)
-		// Wait cho Re-enter email textbox textbox presence trong HTML trong vòng 10s
+		// Wait cho Re-enter email textbox  presence trong HTML trong vòng 10s
 		explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.name("email")));
 	}
 	
@@ -89,7 +89,7 @@ public class topic_20_Element_Condition_Status{
 		explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.name("reg_email_confirmation__")));
 
 	}
-	@Test
+	
 	public void TC_04_Staleness() {
 		// không có trong UI (bắt buộc)
 		// không trong html 
@@ -101,12 +101,10 @@ public class topic_20_Element_Condition_Status{
 		WebElement reEnterEmailAddressTextbox = driver.findElement(By.name("reg_email_confirmation__")); 
 		
 		// thao tác vs element khác làm cho element re-enter ko còn trong DOM nữa
-		
-		
 		// close popup đi 
 		driver.findElement(By.cssSelector("img._8idr")).click(); 
 		
-		// Wait cho Re-enter email textbox textbox khôngcòn trong DOM trong vòng 10s
+		// Wait cho Re-enter email textbox không còn trong DOM trong vòng 10s
 				explicitWait.until(ExpectedConditions.stalenessOf(reEnterEmailAddressTextbox));
 	}
 

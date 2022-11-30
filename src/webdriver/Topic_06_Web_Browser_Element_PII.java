@@ -19,7 +19,7 @@ public class Topic_06_Web_Browser_Element_PII{
 	@BeforeClass
 	public void beforeClass() {
 		if (osName.contains("Mac")) {
-			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
 		}else {
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		}

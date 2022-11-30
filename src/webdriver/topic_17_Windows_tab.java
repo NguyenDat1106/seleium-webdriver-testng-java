@@ -235,9 +235,6 @@ public class topic_17_Windows_tab{
 		}
 		
 	}
-
-	public static void main(String[] args) {
-	}
 }
 //HTML Format
 	//<input class='text form-control'

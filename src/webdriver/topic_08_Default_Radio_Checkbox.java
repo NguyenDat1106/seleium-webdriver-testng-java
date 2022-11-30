@@ -32,7 +32,7 @@ public class topic_08_Default_Radio_Checkbox{
 		
 	}
 
-
+	
 	public void TC_01_Jotform() {
 		driver.get("https://automationfc.github.io/multiple-fields/");
 		
@@ -72,8 +72,8 @@ public class topic_08_Default_Radio_Checkbox{
 		
 	}
 	
-
-public void TC_02_Jotform_Select_all() {
+	
+	public void TC_02_Jotform_Select_all() {
 	driver.get("https://automationfc.github.io/multiple-fields/");
 	
 	List<WebElement> allCheckboxs = driver.findElements(By.xpath("//input[@type='checkbox']"));
@@ -84,20 +84,20 @@ public void TC_02_Jotform_Select_all() {
 		checkToCheckboxOrRadio(checkbox);	
 	}
 	// dùng vòng lập để duyệt qua và kiểm tra
-			for (WebElement checkbox : allCheckboxs) {
-				Assert.assertTrue(isElementSelected(checkbox));
-			}
+	for (WebElement checkbox : allCheckboxs) {
+		Assert.assertTrue(isElementSelected(checkbox));
+	}
 			
 	/* CODE CHAY*/
 	// dùng vòng lập để duyệt qua click chọn
-		for (WebElement checkbox : allCheckboxs) {
+	for (WebElement checkbox : allCheckboxs) {
 			if (!checkbox.isSelected());
 			checkbox.click();	
-		}
+	}
 		
 	// dùng vòng lập để duyệt qua và kiểm tra
 		for (WebElement checkbox : allCheckboxs) {
-			Assert.assertTrue(checkbox.isSelected());
+			Assert.assertFalse(checkbox.isSelected());
 		}
 		
 		
@@ -113,8 +113,8 @@ public void TC_02_Jotform_Select_all() {
 		}				
 }
 
-
-public void TC_03_Select_all() {
+	
+	public void TC_03_Select_all() {
 	driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
 	
 	List<WebElement> allCheckboxs = driver.findElements(By.xpath("//div[@id='example']//input[@type='checkbox']"));
@@ -128,8 +128,8 @@ public void TC_03_Select_all() {
 	}
 }
 
-@Test
-public void TC_04_Default() {
+	@Test
+	public void TC_04_Default() {
 	driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
 	sleepInSecond(5);
 	
